@@ -1,17 +1,16 @@
 package com.khoslalabs.weatherapp.models;
 
-import android.location.Location;
 
 public class WeatherModel {
     //private Request request;
-    private Location location;
+    private LocationModel location;
     private CurrentModel current;
 
-    public Location getLocation() {
+    public LocationModel getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(LocationModel location) {
         this.location = location;
     }
 

@@ -1,23 +1,43 @@
 package com.khoslalabs.weatherapp.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.List;
 
-public class CurrentModel {
+public class CurrentModel implements Serializable {
+    @SerializedName("observation_time")
+    @Expose
     private String observationTime;
-    private Integer temperature;
-    private Integer weatherCode;
+    private int temperature;
+    private int weatherCode;
+    @SerializedName("weather_icons")
+    @Expose
     private List<String> weatherIcons = null;
+    @SerializedName("weather_descriptions")
+    @Expose
     private List<String> weatherDescriptions = null;
+    @SerializedName("wind_speed")
+    @Expose
     private Integer windSpeed;
+    @SerializedName("wind_degree")
+    @Expose
     private Integer windDegree;
+    @SerializedName("wind_dir")
+    @Expose
     private String windDir;
-    private Integer pressure;
-    private Integer precip;
-    private Integer humidity;
-    private Integer cloudcover;
-    private Integer feelslike;
-    private Integer uvIndex;
-    private Integer visibility;
+    private int pressure;
+    private int precip;
+    private int humidity;
+    private int cloudcover;
+    private int feelslike;
+    @SerializedName("uv_index")
+    @Expose
+    private int uvIndex;
+    private int visibility;
+    @SerializedName("is_day")
+    @Expose
     private String isDay;
 
     public String getObservationTime() {
@@ -28,19 +48,19 @@ public class CurrentModel {
         this.observationTime = observationTime;
     }
 
-    public Integer getTemperature() {
+    public int getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(int temperature) {
         this.temperature = temperature;
     }
 
-    public Integer getWeatherCode() {
+    public int getWeatherCode() {
         return weatherCode;
     }
 
-    public void setWeatherCode(Integer weatherCode) {
+    public void setWeatherCode(int weatherCode) {
         this.weatherCode = weatherCode;
     }
 
@@ -60,19 +80,19 @@ public class CurrentModel {
         this.weatherDescriptions = weatherDescriptions;
     }
 
-    public Integer getWindSpeed() {
+    public int getWindSpeed() {
         return windSpeed;
     }
 
-    public void setWindSpeed(Integer windSpeed) {
+    public void setWindSpeed(int windSpeed) {
         this.windSpeed = windSpeed;
     }
 
-    public Integer getWindDegree() {
+    public int getWindDegree() {
         return windDegree;
     }
 
-    public void setWindDegree(Integer windDegree) {
+    public void setWindDegree(int windDegree) {
         this.windDegree = windDegree;
     }
 
@@ -84,59 +104,59 @@ public class CurrentModel {
         this.windDir = windDir;
     }
 
-    public Integer getPressure() {
+    public int getPressure() {
         return pressure;
     }
 
-    public void setPressure(Integer pressure) {
+    public void setPressure(int pressure) {
         this.pressure = pressure;
     }
 
-    public Integer getPrecip() {
+    public int getPrecip() {
         return precip;
     }
 
-    public void setPrecip(Integer precip) {
+    public void setPrecip(int precip) {
         this.precip = precip;
     }
 
-    public Integer getHumidity() {
+    public int getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(Integer humidity) {
+    public void setHumidity(int humidity) {
         this.humidity = humidity;
     }
 
-    public Integer getCloudcover() {
+    public int getCloudcover() {
         return cloudcover;
     }
 
-    public void setCloudcover(Integer cloudcover) {
+    public void setCloudcover(int cloudcover) {
         this.cloudcover = cloudcover;
     }
 
-    public Integer getFeelslike() {
+    public int getFeelslike() {
         return feelslike;
     }
 
-    public void setFeelslike(Integer feelslike) {
+    public void setFeelslike(int feelslike) {
         this.feelslike = feelslike;
     }
 
-    public Integer getUvIndex() {
+    public int getUvIndex() {
         return uvIndex;
     }
 
-    public void setUvIndex(Integer uvIndex) {
+    public void setUvIndex(int uvIndex) {
         this.uvIndex = uvIndex;
     }
 
-    public Integer getVisibility() {
+    public int getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(Integer visibility) {
+    public void setVisibility(int visibility) {
         this.visibility = visibility;
     }
 

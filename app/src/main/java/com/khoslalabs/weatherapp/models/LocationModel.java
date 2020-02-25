@@ -1,14 +1,23 @@
 package com.khoslalabs.weatherapp.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class LocationModel {
     private String name;
     private String country;
     private String region;
     private String lat;
     private String lon;
+    @SerializedName("timezone_id")
+    @Expose
     private String timezoneId;
     private String localtime;
+    @SerializedName("localtime_epoch")
+    @Expose
     private Integer localtimeEpoch;
+    @SerializedName("utc_offset")
+    @Expose
     private String utcOffset;
 
     public String getName() {
