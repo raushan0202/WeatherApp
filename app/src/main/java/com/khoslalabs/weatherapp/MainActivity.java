@@ -22,23 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
         activityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main);
         mainActivityViewModel= ViewModelProviders.of(this).get(MainActivityViewModel.class);
-
         setObserver();
 
-        activityMainBinding.swipeLayout.setColorSchemeResources(R.color.colorPrimary);
-        activityMainBinding.swipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-
-            }
-        });
     }
 
     private void setObserver() {
         mainActivityViewModel.fetchWeatherData().observe(this, new Observer<WeatherModel>() {
             @Override
             public void onChanged(WeatherModel weatherModel) {
-
+                if (weatherModel != null && weatherModel.getCurrent() != null){
+                    activityMainBinding.setWeather(weatherModel.getCurrent());
+                }
             }
         });
     }

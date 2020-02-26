@@ -15,12 +15,15 @@ public class MainActivityViewModel extends AndroidViewModel {
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
         mainRepository=new MainRepository(application);
-        mainRepository.getUpdatedWeatherData(null);
+        callWeatherAPI();
     }
 
     public MutableLiveData<WeatherModel> fetchWeatherData(){
         return mainRepository.getWeatherData();
     }
 
+    public void callWeatherAPI(){
+        mainRepository.getUpdatedWeatherData(null);
+    }
 
 }
